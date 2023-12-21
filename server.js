@@ -3,11 +3,11 @@ const app = express();
 
 app.use(express.json());
 
-// const helloWorld = require("./routes/helloWorld");
+const helloWorld = require("./routes/helloWorld");
 // const getSantaListById = require("./routes/getSantaListById");
 const insertSantaListGame = require("./routes/insertSantaListGame");
 
-// app.use("/", helloWorld);
+app.use("/", helloWorld);
 // app.use("/get-game", getSantaListById);
 app.use("/insert-list", insertSantaListGame);
 
