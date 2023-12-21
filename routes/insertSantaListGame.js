@@ -23,10 +23,10 @@ router.post("/", (req, res) => {
   //   console.log("shuffled: ", shuffled);
 
   for (let i = 0; i < players.length; i++) {
-    secret.push({ Recipient: players[i], Santa: santas[i] });
+    secret.push({ Recipient: players[i], Santa: shuffled[i] });
   }
   console.log(secret);
-  res.send(secret);
+  res.json(secret);
 });
 
 module.exports = router;
